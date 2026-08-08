@@ -61,7 +61,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 # This image shows the DDLC logo in the normal DDLC position.
 image menu_logo:
-    "/mod_assets/DDLCModTemplateLogo.png"
+    "gui/logo.png"
     # im.Composite((512, 512), (0, 0), recolorize("mod_assets/logo_bg.png"), (0, 0), "mod_assets/logo_fg.png")
     subpixel True
     xcenter 240
@@ -167,7 +167,7 @@ image menu_art_s_glitch:
 # This image shows the main menu screen in the main/pause menu.
 image menu_nav:
     "gui/overlay/main_menu.png"
-    #recolorize("gui/overlay/main_menu.png", "#ffbde1")
+    recolorize("gui/overlay/main_menu.png", "#006540", "#0ce294")
     menu_nav_move
 
 ## Main Menu Effects
