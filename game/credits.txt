@@ -1,0 +1,3 @@
+MPT:
+This project uses code and/or assets from the Mood Posing Tool, developed by members of the Doki Doki Rewind/Replay team (Chronos, Yagamirai, and Terra).  The assets from the MPT may not be redistributed in any form.  More information concerning the MPT - including downloads and documentation - can be found at this link: https://github.com/chronoshag/DDLCMPT
+
