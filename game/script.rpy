@@ -47,8 +47,7 @@ label start:
     # 'persistent.playthrough' controls the playthrough number the player is on i.e (Act 1, 2, 3, 4)
     
     # REMOVE THIS LINE WHEN YOU HAVE MADE A STORY SCRIPT FILE AND CALLED IT HERE
-    call screen dialog(message="It seems that you are trying to run the mod template as a new game with no story.\nThis is a template, not an actual mod. Please code a story for your mod, call it in \'script.rpy\', and try again.", ok_action=MainMenu(confirm=False))
-
+    call testing_main
     ## Example on calling scripts from DDLC.
     # if persistent.playthrough == 0:
 
@@ -186,7 +185,16 @@ label start:
     #     $ chapter = 0
     #     call ch40_main
     #     jump credits
-
+label testing_main:
+    play music t2
+    scene bg residential_day
+    show sayori turned happ lup rup at t11
+    s "Are you done yet?"
+    s om "Are you done yet?"
+    s cm "Are you done yet?"
+    show sayori at h11
+    s ce om "Now you're done!"
+    return
 # This label is where the game 'ends' during Act 1.
 label endgame(pause_length=4.0):
     $ quick_menu = False

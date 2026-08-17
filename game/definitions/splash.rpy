@@ -74,14 +74,14 @@ image menu_bg:
     topleft
     "gui/menu_bg.png"
     # recolorize("gui/menu_bg.png", "#ffdbf0", "#fff", 1)
-    menu_bg_move
+    #menu_bg_move
 
 # This image shows the pause menu polka-dot image.
 image game_menu_bg:
     topleft
-    "gui/menu_bg.png"
+    "gui/game_menu_bg.png"
     # recolorize("gui/menu_bg.png", "#ffdbf0", "#fff", 1)
-    menu_bg_loop
+    
 
 # This image transform shows the white fading effect in the main menu.
 image menu_fade:
@@ -165,10 +165,7 @@ image menu_art_s_glitch:
     menu_art_move(.8, 470, .8)
 
 # This image shows the main menu screen in the main/pause menu.
-image menu_nav:
-    "gui/overlay/main_menu.png"
-    recolorize("gui/overlay/main_menu.png", "#006540", "#0ce294")
-    menu_nav_move
+
 
 ## Main Menu Effects
 # These transforms and image transform store the effects that appear in the

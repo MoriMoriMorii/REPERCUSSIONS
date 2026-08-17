@@ -6,11 +6,11 @@
 # This file customizes what your mod is and and how it starts and builds!
 
 # This controls what your mod is called.
-define config.name = "DDLC Mod Template – Python 3 Edition"
+define config.name = "Repercussions"
 
 # This controls whether you want your mod name to show in the main menu.
 # If your mod name is big, it is suggested to turn this off.
-define gui.show_name = True
+define gui.show_name = False
 
 # This controls the version number of your mod.
 define config.version = "4.2.0–Py3"
@@ -24,7 +24,7 @@ define gui.about = _("")
 # Note:
 #   The build name is ASCII only so no numbers, spaces, or semicolons.
 #   Example: Doki Doki Yuri Time to DokiDokiYuriTime
-define build.name = "DDLCModTemplateTwo-Py3"
+define build.name = "Repercussions"
 
 # This configures whether your mod has sound effects.
 define config.has_sound = True

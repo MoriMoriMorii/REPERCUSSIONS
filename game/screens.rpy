@@ -28,16 +28,16 @@ init python:
 default translations = scan_translations()
 
 # Enables the ability to add more settings in the game such as uncensored mode.
-default extra_settings = True
-default enable_extras_menu = True
-default enable_languages = True
+default extra_settings = False
+default enable_extras_menu = False
+default enable_languages = False
 
 ## Color Styles
 ################################################################################
 
 # This controls the color of outlines in the game like
 # text, say, navigation, labels and such.
-define -2 text_outline_color = "#b59"
+define -2 text_outline_color = "#2d050d"
 
 ## Styles
 ################################################################################
@@ -466,11 +466,13 @@ init python:
 
 screen navigation():
 
-    vbox:
+    hbox:
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.8
+        yalign 0.90
+        #xalign 0.5
+        
 
         spacing gui.navigation_spacing
 
@@ -512,10 +514,10 @@ screen navigation():
             if renpy.variant("pc"):
 
                 ## Help isn't necessary or relevant to mobile devices.
-                textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
+                #textbutton _("Help") action [Help("README.html"), Show(screen="dialog", message="The help file has been opened in your browser.", ok_action=Hide("dialog"))]
 
                 ## The quit button is banned on iOS and unnecessary on Android.
-                textbutton _("Quit") action Quit(confirm=not main_menu)
+                textbutton _("Exit") action Quit(confirm=not main_menu)
         else:
             timer 1.75 action Start("autoload_yurikill")
 
@@ -531,12 +533,12 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    font "gui/font/RifficFree-Bold.ttf"
-    color "#fff"
+    font "gui/font/Flatline-1ad2.ttf"
+    color "#b61c39"
     outlines [(4, text_outline_color, 0, 0), (2, text_outline_color, 2, 2)]
     #outlines [(4, "#b59", 0, 0), (2, "#b59", 2, 2)]
-    hover_outlines [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
-    insensitive_outlines [(4, "#fce", 0, 0), (2, "#fce", 2, 2)]
+    hover_outlines [(4, "#d15b71", 0, 0), (2, "#d15b71", 2, 2)]
+    insensitive_outlines [(4, "#5a2c35", 0, 0), (2, "#5a2c35", 2, 2)]
 
 
 ## Main Menu screen ############################################################
@@ -558,8 +560,8 @@ screen main_menu():
         add "menu_art_n_ghost"
     else:
         add "menu_bg"
-        add "menu_art_y"
-        add "menu_art_n"
+        #add "menu_art_y"
+        #add "menu_art_n"
         frame
 
         ## The use statement includes another screen inside this one. The actual
@@ -567,10 +569,11 @@ screen main_menu():
         use navigation
 
     if not persistent.ghost_menu:
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_logo"
+        #add "menu_particles"
+        #add "menu_particles"
+        #add "menu_particles"
+        #add "menu_logo"
+        pass
     if persistent.ghost_menu:
         add "menu_art_s_ghost"
         add "menu_art_m_ghost"
@@ -578,10 +581,12 @@ screen main_menu():
         if persistent.playthrough == 1 or persistent.playthrough == 2:
             add "menu_art_s_glitch"
         else:
-            add "menu_art_s"
-        add "menu_particles"
+            #add "menu_art_s"
+            pass
+        #add "menu_particles"
         if persistent.playthrough != 4:
-            add "menu_art_m"
+            #add "menu_art_m"
+            pass
         add "menu_fade"
 
     if gui.show_name:
@@ -608,7 +613,7 @@ style main_menu_frame:
     xsize 310
     yfill True
 
-    background "menu_nav"
+    #background "menu_nav"
 
 style main_menu_vbox:
     xalign 1.0
@@ -647,6 +652,7 @@ screen game_menu(title, scroll=None):
     # Add the backgrounds.
     if main_menu:
         add gui.main_menu_background
+        pass
     else:
         key "mouseup_3" action Return()
         add gui.game_menu_background
@@ -729,7 +735,7 @@ style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "gui/overlay/game_menu.png"
+    #background "gui/overlay/game_menu.png"
     # background recolorize("gui/overlay/game_menu.png")
 
 style game_menu_navigation_frame:
@@ -755,7 +761,7 @@ style game_menu_label:
     ysize 120
 
 style game_menu_label_text:
-    font "gui/font/RifficFree-Bold.ttf"
+    font "gui/font/Flatline-1ad2.ttf"
     size gui.title_text_size
     color "#fff"
     outlines [(6, text_outline_color, 0, 0), (3, text_outline_color, 2, 2)]
@@ -1355,7 +1361,7 @@ style pref_label:
     bottom_margin 2
 
 style pref_label_text:
-    font "gui/font/RifficFree-Bold.ttf"
+    font "gui/font/Flatline-1ad2.ttf"
     size 24
     color "#fff"
     outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]

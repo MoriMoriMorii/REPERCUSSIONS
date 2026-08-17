@@ -66,7 +66,7 @@ define -2 gui.text_size = 24
 define -2 gui.name_text_size = 24
 
 # This determines the text size of the game's user interface.
-define -2 gui.interface_text_size = 24
+define -2 gui.interface_text_size = 28
 
 # This determines the text size of the game's label in the user interface.
 define -2 gui.label_text_size = 28
@@ -84,7 +84,7 @@ define -2 gui.title_text_size = 38
 define -2 gui.main_menu_background = "menu_bg"
 
 # This sets background for the pause/game menu
-define -2 gui.game_menu_background = "game_menu_bg"
+define -2 gui.game_menu_background = "gui/game_menu_bg.png"
 
 ## Dialogue
 # These variables set the dialogue box positions and placement in-game.
@@ -222,7 +222,7 @@ define gui.file_slot_rows = 2
 # These variables control the positioning and spacing of various user interface
 # elements.
 
-define gui.navigation_xpos = 80
+define gui.navigation_xpos = 190
 define gui.skip_ypos = 10
 define gui.notify_ypos = 45
 
@@ -230,7 +230,8 @@ define gui.notify_ypos = 45
 define gui.choice_spacing = 22
 
 # This controls the spacing between each navigation option in the navigation screen.
-define gui.navigation_spacing = 6
+define gui.navigation_spacing = 0
+
 
 # This controls the spacing between each preference and preference button option 
 # in the preference screen.
